@@ -4,6 +4,7 @@ packages.mkShell {
   # 基本的な開発ツール
   buildInputs = with packages; [
     git
+    docker
   ];
 
   # ホストの環境と完全に分離する

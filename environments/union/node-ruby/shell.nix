@@ -14,5 +14,5 @@ packages.mkShell {
   shellHook = ''
     ${nodeShell.shellHook}
     ${rubyShell.shellHook}
-  ''
+  '';
 }

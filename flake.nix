@@ -20,8 +20,8 @@
       in
       {
         devShells = {
-          default = import ./shells/shell.nix { inherit packages; };
-          node = import ./environments/node/shell.nix { inherit packages; };
+          default = import ./environments/base/shell.nix { inherit packages; };
+          node_ruby = import ./environments/union/node-ruby/shell.nix { inherit packages; };
         };
       }
     );

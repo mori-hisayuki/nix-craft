@@ -9,7 +9,11 @@ in
 packages.mkShell {
   inherit (nodeShell) pure; # どちらかの設定を継承
 
-  buildInputs = nodeShell.buildInputs ++ rubyShell.buildInputs;
+  buildInputs = nodeShell.buildInputs 
+    ++ rubyShell.buildInputs
+    ++ (with packages; [
+      vscode
+    ]);
 
   shellHook = ''
     ${nodeShell.shellHook}

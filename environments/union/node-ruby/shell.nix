@@ -12,7 +12,7 @@ packages.mkShell {
   buildInputs = nodeShell.buildInputs 
     ++ rubyShell.buildInputs
     ++ (with packages; [
-      vscode
+      vscodium
     ]);
 
   shellHook = ''

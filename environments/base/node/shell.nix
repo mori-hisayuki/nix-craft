@@ -2,7 +2,7 @@
 
 let
   # 共通の設定を読み込む
-  baseShell = import ../../shells/shell.nix { inherit packages; };
+  baseShell = import ../shell.nix { inherit packages; };
 in
 packages.mkShell {
   # 基本シェルから設定を継承
